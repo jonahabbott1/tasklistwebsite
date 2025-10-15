@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tasks</title>
+  <!-- Links to stylesheets -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css">  -->
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body onload="readTasks()">
+  <!-- Your visible elements -->
+  <nav>
+    <a href="https://learningsuite.byu.edu/.bTnZ/cid-RsMgMH7f9mY6/student/calendar">Learning Suite ITC-210</a>
+  </nav>
+  <h1>My Tasks</h1>
+  <input type='checkbox' class="toggle-switch" id="Sort-by-date"/>
+  <label for="Sort-by-date">Sort by date</label>
+  <input type='checkbox' class="toggle-switch" id="Filter-completed-tasks"/>
+  <label for="Filter-completed-tasks">Filter completed tasks</label>
+  <ul class="tasklist"  id="tasklist">
+    <!-- <li class="task">
+  <input type='checkbox' class="task-done" id="Finish-lab-1a"/>
+  <label for="Finish-lab-1a" class="task-description">Finish lab 1a</label> 
+      <span class="task-date">9-5-2025</span>
+      <button class="task-delete material-icon">remove_circle</button>
+      <span></span>
+    </li>
+    <li class="task">
+  <input type='checkbox' class="task-done" id="Go-to-the-gym" checked/>
+  <label for="Go-to-the-gym" class="task-description task-completed">Go to the gym</label> 
+      <span class="task-date">9-6-2025</span>
+      <button class="task-delete material-icon">remove_circle</button>
+      <span></span>
+    </li> -->
+  </ul>
+  <form class="form-create-task" onsubmit="createTask(event)">
+     <input name='taskDescription' type='text' id='new-task' class='input-description' required/><br>
+     <input name='taskDate' type='date' id='new-date' required/><br>
+     <button class="task-button">Create Task</button>
+
+  </form>
+  <!-- Links to scripts -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
